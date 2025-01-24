@@ -1,0 +1,68 @@
+iframe {
+    border: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.container {
+    padding: 100px 100px;
+    display: block !important;
+}
+
+.row {
+    margin: 50px 0;
+    background-color: var(--gold);
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.col,
+.bcol {
+    display: inline-block;
+    vertical-align: top;
+    /* Add this line */
+}
+
+.bcol {
+    width: fit-content;
+}
+
+.col {
+    margin-left: 20px;
+    width: calc(100% - 420px);
+}
+
+.banner {
+    width: 400px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 30px 0;
+    
+}
+
+.Titolo {
+    font-size: 2em;
+    font-family: "Bebas Neue", sans-serif !important;
+    margin-top: -50px;
+}
+
+h1 a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.subp {
+    margin-bottom: 25px;
+}
+
+.p {
+    font-size: 1.5em;
+    font-family: "Bebas Neue", sans-serif !important;
+}
+
+p {
+    margin: 0;
+}

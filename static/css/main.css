@@ -1,0 +1,65 @@
+
+
+:root {
+    --white: #FAF3E0;
+    --black: #1C1C1C;
+    --red: #B22222;
+    --gold: #FFD700;
+}
+
+
+::-webkit-scrollbar {
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+}
+
+body{
+    background-color: black;
+    padding: 0 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: var(--red);
+    margin: 175px auto;
+    max-width: 1200px;
+    border-radius: 15px;
+}
+
+.locandina {
+    width: 100%;
+    height: 100%;
+}
+.film {
+    flex: 0 1 18%;
+    background-color: var(--gold);
+    aspect-ratio: 4/7;
+    margin: 20px 1%; /* Adjusted margin to ensure max distance between cards is 20px */
+    position: relative; /* Changed to relative to position delete-button inside */
+}
+
+
+.film a{
+    color: var(--black);
+    font-size: 1.6em;
+    font-family: "Bebas Neue";
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+.film .genre {
+    font-size: 0.7em !important;
+    color: red !important;
+}
+
+.banner {
+    aspect-ratio: 2/3
+}

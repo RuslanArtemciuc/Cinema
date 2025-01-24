@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}" />
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/film_renderer_admin.js') }}" defer></script>
+
+
+    <link rel="favicon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
+    <title> Admin Home </title>
+</head>
+
+<body>
+    <nav class="navbara l-center" toggle="large">
+        <div class="navbar-component navbar-left">
+            <div class="navbar-logo">
+                <img src="{{ url_for('static', filename='images/icon.png') }}" alt="navbar-logo" />
+            </div>
+            <a href="/" class="navbar-title title">Movies Romani</a>
+        </div>
+
+        <div class="navbar-component navbar-middle"></div>
+
+        <div class="navbar-component navbar-right">
+            <div class="navbar-links">
+                <a class="navbar-link underline-on-hover" href="/">Home</a>
+                <a class="navbar-link underline-on-hover" href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+
+
+    </div>
+
+
+
+</body>
+
+</html>

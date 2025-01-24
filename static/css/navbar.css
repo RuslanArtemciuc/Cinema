@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+
+:root {
+  --inclinazione-navbar: 30deg;
+  --navbar-bg-color-1: #1C1C1C;
+  --navbar-bg-color-2: #FFD700;
+  --navbar-font-color: white;
+}
+
+.navbara {
+  width: 200%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  color: white;
+  
+  left: 50%;
+  translate: -50%;
+}
+
+.navbara a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbara[toggle="small"] {
+  margin-top: 10px;
+  max-width: 82vw;
+
+  transition: max-width 2s ease 0s, margin-top 0.3s ease 0s;
+}
+
+.navbara[toggle="large"] {
+  margin-top: 0;
+  max-width: 110vw;
+
+  transition: max-width 1.3s ease 1s, margin-top 2s ease 1s;
+}
+
+.navbar-component {
+  transform: skew(calc(-1 * var(--inclinazione-navbar)));
+  background-color: var(--navbar-bg-color-1);
+  position: absolute;
+  align-items: center;
+}
+
+.navbar-component > * {
+  transform: skew(var(--inclinazione-navbar));
+}
+
+.navbar-left {
+  left: 3px;
+  min-width: 50%;
+  height: 100px;
+}
+
+.navbara[toggle="small"] > .navbar-left {
+  max-height: 95px;
+  top: 20px;
+
+  transition: top 1s ease 1.2s, max-height 1s ease 0s;
+}
+
+.navbara[toggle="large"] > .navbar-left {
+  max-height: 100px;
+  top: 0;
+
+  transition: top 0.6s ease 0.6s, max-height 2.3s ease 1s;
+}
+
+.navbar-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 95px;
+  width: 20px;
+  background-color: var(--navbar-bg-color-2);
+}
+
+.navbara[toggle="small"] > .navbar-left::before {
+  left: -30px;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1.7s;
+}
+
+.navbara[toggle="large"] > .navbar-left::before {
+  left: 0;
+  transition: 1s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+}
+
+.navbar-middle {
+  left: 50%;
+  height: 1000px;
+  transform: translate(-50%) skew(calc(-1 * var(--inclinazione-navbar)));
+  z-index: 1;
+  background-color: var(--navbar-bg-color-2);
+}
+
+.navbara[toggle="small"] > .navbar-middle {
+  max-height: 115px;
+  min-width: 20px;
+  transition: max-height 1s ease 1.2s, min-width 1s ease-in-out 0.8s;
+}
+
+.navbara[toggle="large"] > .navbar-middle {
+  max-height: 95px;
+  min-width: 0%;
+  transition: max-height 0.6s ease 0.6s, min-width 0.2s ease 0.9s;
+}
+
+.navbar-right {
+  right: 2px;
+  gap: 6%;
+  height: 1000px;
+  z-index: -1;
+  min-width: 50%;
+}
+
+.navbara[toggle="small"] > .navbar-right {
+  max-height: 95px;
+  transition: max-height 1s ease 0s;
+}
+
+.navbara[toggle="large"] > .navbar-right {
+  max-height: 100px;
+  transition: max-height 2.3s ease 1s;
+}
+
+.navbar-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 95px;
+  width: 20px;
+  background-color: var(--navbar-bg-color-2);
+}
+
+.navbara[toggle="small"] > .navbar-right::after {
+  right: -30px;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1.7s;
+}
+
+.navbara[toggle="large"] > .navbar-right::after {
+  right: 0;
+  transition: 1s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+}
+
+.navbar-logo {
+  height: 65%;
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  translate: 0 -50%;
+}
+
+.navbar-logo > img {
+  height: 100%;
+}
+
+.navbar-title {
+  font-size: 3em;
+  top: 52%;
+  translate: 50% -50%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif !important;
+}
+
+.navbara[toggle="large"] .navbar-title {
+  right: 0%;
+  transition: right 1s ease 1s;
+}
+
+.navbara[toggle="small"] .navbar-title {
+  right: 50%;
+  transition: right 1s ease 0.4s;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  translate: 0 -50%;
+  width: 80%;
+  top: 50%;
+}
+
+.navbara[toggle="small"] .navbar-links {
+  right: 10%;
+  transition: right 1s ease 0s;
+}
+
+.navbara[toggle="large"] .navbar-links {
+  right: -10%;
+  transition: right 1s ease 1s;
+}
+
+.navbar-link {
+  font-size: 1.2em;
+  position: relative;
+  padding: 0 14px;
+}
